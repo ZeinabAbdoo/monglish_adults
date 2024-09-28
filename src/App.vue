@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MonglishNavbarAr />
+    <component :is="currentNavbar" />
     <router-view />
     <component :is="currentFooter" />
     <WhatsappButton />
@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import MonglishNavbarAr from './components/MonglishNavbar.vue';
+import MonglishNavbarAr from './components/ar/MonglishNavbar.vue';
+import MonglishNavbarEn from './components/en/MonglishNavbar.vue';
 import AdultsLanding from './components/ar/AdultsLanding.vue'
 import MonglishFooterAr from './components/ar/MonglishFooter.vue';
 import MonglishFooterEn from './components/en/MonglishFooter.vue';
@@ -18,14 +19,17 @@ export default {
   name: 'App',
     data() {
     return {
+      currentNavbar: 'MonglishNavbarAr',
       currentFooter: 'MonglishFooterAr',
     };
   },
   watch: {
     '$route'(to) {
       if (to.path.startsWith('/en')) {
+        this.currentNavbar = 'MonglishNavbarEn';
         this.currentFooter = 'MonglishFooterEn';
       } else {
+        this.currentNavbar = 'MonglishNavbarAr';
         this.currentFooter = 'MonglishFooterAr';
       }
     }
@@ -35,7 +39,8 @@ export default {
     AdultsLanding,
     MonglishFooterAr,
     MonglishFooterEn,
-    WhatsappButton
+    WhatsappButton,
+    MonglishNavbarEn
   }
 }
 </script>

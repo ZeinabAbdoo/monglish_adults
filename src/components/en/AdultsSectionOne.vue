@@ -53,14 +53,16 @@ export default {
   background-position: center;
   color: #FFF;
   text-align: left;
-  padding: 4rem;
+  padding: 1rem 4rem 4rem 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 110vh;
+  height: 100vh;
   box-sizing: border-box;
   margin-top: -85px;
   transform: scalex(-1);
+  z-index: -1;
+  position: relative;
 }
 
 .adults-sec1::before {
