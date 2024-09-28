@@ -1,7 +1,7 @@
 <template>
   <!--Section Three Content-->
   <div class="kids-sec3">
-    <h1>فلسفة منهج المعايشة</h1>
+    <h1>The philosophy of the Mongi - immers</h1>
     <div class="kids-iframe-container">
       <iframe 
         src="https://player.vimeo.com/video/822494136" 
