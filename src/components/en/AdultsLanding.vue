@@ -41,15 +41,15 @@
 </template>
 
 <script>
-import CoursesSwiper from '../../components/ar/CoursesSwiper.vue';
-import AdultLevels from '../../components/ar/AdultLevels.vue';
-import AdultsSectionOne from '../../components/ar/AdultsSectionOne.vue';
-import AdultsSectionTwo  from '../../components/ar/AdultsSectionTwo.vue';
-import AdultsSectionThree from '../../components/ar/AdultsSectionThree.vue';
-import AdultsSectionFour from '../../components/ar/AdultsSectionFour.vue';
-import AdultsSectionFive from '../../components/ar/AdultsSectionFive.vue';
-import PackagesAdults from '../../components/ar/PackagesAdults.vue';
-import ViewThree from '../../components/ar/ViewThree';
+import CoursesSwiper from '../../components/en/CoursesSwiper.vue';
+import AdultLevels from '../../components/en/AdultLevels.vue';
+import AdultsSectionOne from '../../components/en/AdultsSectionOne.vue';
+import AdultsSectionTwo  from '../../components/en/AdultsSectionTwo.vue';
+import AdultsSectionThree from '../../components/en/AdultsSectionThree.vue';
+import AdultsSectionFour from '../../components/en/AdultsSectionFour.vue';
+import AdultsSectionFive from '../../components/en/AdultsSectionFive.vue';
+import PackagesAdults from '../../components/en/PackagesAdults.vue';
+import ViewThree from '../../components/en/ViewThree';
 
 import Swiper from 'swiper';
 import 'swiper/css';

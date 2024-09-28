@@ -56,9 +56,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import router from '@/router'; 
-import { routeMappings } from '@/router/routeMappings.js';
-
 export default {
   name: 'AdultsCourses',
   components: {
@@ -135,11 +132,6 @@ export default {
     },
     toggleDescription(id) {
       this.activeDescription = this.activeDescription === id ? null : id;
-    },
-    switchToEnglish() {
-      const currentPath = router.currentRoute.value.path;
-      const englishPath = routeMappings[currentPath] || '/';
-      router.push(englishPath);
     }
   }
 }

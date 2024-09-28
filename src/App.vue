@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <MonglishNavbarAr />
-    <AdultsLanding />
+    <router-view />
     <component :is="currentFooter" />
     <WhatsappButton />
   </div>
