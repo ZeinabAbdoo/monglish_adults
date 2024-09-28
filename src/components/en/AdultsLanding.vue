@@ -33,11 +33,10 @@
   <ViewThree />
  
   <div class="Last-section">
-    <h1>مازلت تحتاج للمساعدة ؟</h1>
-    <p>يسعدنا استقبال رسائلكم والرد على جميع استفساراتكم.</p>
-    <a href="https://www.monglish.co.uk/ar/contact" class="contact-btn">تواصل معنا</a>
-  </div>
-
+    <h1>Still Need Help?</h1>
+    <p>We are happy to receive your messages and respond to all your inquiries.</p>
+    <a href="https://www.monglish.co.uk/en/contact" class="contact-btn">Contact Us</a>
+</div>
 </template>
 
 <script>
@@ -258,8 +257,8 @@ export default {
   width: 85%;
   background-color: #eee;
   border-radius: 15px;
-  direction: rtl;
-  text-align: right;
+  direction: ltr;
+  text-align: left;
   position: relative;
   padding: 5px 20px 20px 20px;
   margin: 40px auto 20px auto;
@@ -291,8 +290,37 @@ export default {
   font-size: 20px;
   font-weight: 500;
   position: absolute;
-  left: 20px; 
+  right: 20px; 
   bottom: 20px;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .Last-section {
+    width: 95%;  /* Full width for mobile */
+    padding: 10px;  /* Adjust padding */
+    margin: 20px auto;  /* Adjust margin */
+  }
+
+  .Last-section h1 {
+    font-size: 28px;  /* Smaller font size for mobile */
+    line-height: 40px;  /* Adjust line height */
+  }
+
+  .Last-section p {
+    font-size: 16px;  /* Smaller font size for mobile */
+    line-height: 24px;  /* Adjust line height */
+  }
+
+  .contact-btn {
+    padding: 8px 16px;  /* Adjust padding */
+    font-size: 18px;  /* Smaller font size for mobile */
+    position: relative;  /* Change position to relative */
+    right: auto;  /* Reset right position */
+    bottom: auto;  /* Reset bottom position */
+    margin-top: 10px;  /* Add margin for spacing */
+  }
+}
+
 
 </style>

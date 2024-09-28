@@ -258,6 +258,7 @@ export default {
   font-family: 'DIN Next LT Arabic', sans-serif;
 }
 
+
 .Last-section {
   width: 85%;
   background-color: #eee;
@@ -297,6 +298,34 @@ export default {
   position: absolute;
   left: 20px; 
   bottom: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .Last-section {
+    width: 95%;  /* Full width for mobile */
+    padding: 10px;  /* Adjust padding */
+    margin: 20px auto;  /* Adjust margin */
+  }
+
+  .Last-section h1 {
+    font-size: 28px;  /* Smaller font size for mobile */
+    line-height: 40px;  /* Adjust line height */
+  }
+
+  .Last-section p {
+    font-size: 16px;  /* Smaller font size for mobile */
+    line-height: 24px;  /* Adjust line height */
+  }
+
+  .contact-btn {
+    padding: 8px 16px;  /* Adjust padding */
+    font-size: 18px;  /* Smaller font size for mobile */
+    position: relative;  /* Change position to relative */
+    left: auto;  /* Reset right position */
+    bottom: auto;  /* Reset bottom position */
+    margin-top: 10px;  /* Add margin for spacing */
+  }
 }
 
 </style>
