@@ -10,8 +10,8 @@
   <!--Section Eight Content-->
   <div class="kids-sec8">
     <div class="kids-sec8-row">
-      <h4>الآراء الإيجابية <br><span> لأولياء الأمور</span></h4>
-      <p>آراء طلابنا الإيجابية تعكس بوضوح الأثر العميق لدوراتنا على مساراتهم المهنية. فهم يؤكدون باستمرار على كيفية مساهمة هذه الدورات في تحسين أدائهم في العمل، وتعزيز مهاراتهم العملية، مما يشير إلى القيمة الكبيرة والفائدة الهائلة التي تقدمها أكاديميتنا.</p>
+      <h4>ARE YOU SEEKING TO IMMERSE YOURSELF IN THE LANGUAGE IMMEDIATELY? <br><span>WELCOME!</span></h4>
+      <p>The positive feedback from our students clearly reflects the profound impact of our courses dedicated work on their career paths. They consistently affirm how these courses contribute to enhancing their performance at work and strengthening their practical skills. This underscores the significant value and immense benefit provided by our academy.</p>
     </div>
 
     <div class="adult-swiper">
@@ -75,31 +75,28 @@ export default {
       totalSections: 3,
       currentIndex: 0,
       reviews: [
-        {
-          stars: 5,
-          review:
-            'جزاك الله خير انا حضرت المحاضرة كامله معاها ماشاء الله أسلوبه متميز يتسم بالهدوء أثناء الشرح',
-          by: 'عبد الله عوده',
-        },
-        {
-          stars: 4,
-          review:
-            'الله يعطيكم العافية بصراحه تمنيت اني دخلت عبد الرحمن من زمان لاني لاحظت تطور كبير و هذا بفضل الله وتوفيقة ثم بفضل جهدكم معانا واهتمامكم بأدق ادق التفاصيل و متابعة الواجابات و حرصكم بتذكيرنا بمواعيد الاندية كانه ابن لكم',
-          by: 'ام عبد الرحمن',
-        },
-        {
-          stars: 5,
-          review:
-            'لا بجد ما شاء الله ربنا يبارك فيها من أجمل واحسن المدرسين اللي في الأكاديمية و غير الضمير الي عندها ربنا يرضيها يارب في حياتها',
-          by: 'والدة إياد',
-        },
-        {
-          stars: 5,
-          review:
-            'السلام عليكم ورحمة الله وبركاته نادي القراءة حقيقي اللي مسؤوله عنه مره ممتازة ما شاء الله و بترد في اسرع وقت وتقوم بتحديد الموعد و ملتزمة جدا جزاها الله خيرا',
-          by: 'فهد محمد',
-        },
-      ], swiper: null, 
+  {
+    "stars": 5,
+    "review": "May God reward you. I attended the entire lecture with her, and she has a unique style characterized by calmness during the explanation.",
+    "by": "Abdullah Awda"
+  },
+  {
+    "stars": 4,
+    "review": "May God give you wellness. Honestly, I wish I had enrolled with Abdul Rahman a long time ago, as I noticed significant progress, thanks to God’s grace and then to your efforts with us and your attention to every detail, following up on assignments, and your commitment to reminding us of club dates as if he were your son.",
+    "by": "Um Abdul Rahman"
+  },
+  {
+    "stars": 5,
+    "review": "Honestly, may God bless her. She is one of the best teachers at the academy, and her dedication is remarkable. May God be pleased with her in her life.",
+    "by": "Mother of Iyad"
+  },
+  {
+    "stars": 5,
+    "review": "Peace be upon you. The reading club is truly excellent, and the person responsible for it is outstanding. She responds quickly, schedules appointments, and is very committed. May God reward her well.",
+    "by": "Fahd Mohammed"
+  }
+]
+, swiper: null, 
     };
   },
   mounted() {
@@ -125,7 +122,7 @@ export default {
     startAutoNavigate() {
       setInterval(() => {
         if (this.swiper) {
-          this.swiper.slideNext(); 
+          this.swiper.slidePrev(); 
         }
       }, 3000); 
     },
@@ -142,7 +139,7 @@ export default {
   padding: 2%;
   background-color: white;
   height: auto; 
-  direction: rtl;
+  direction: ltr;
 }
 .kids-sec8-row {
   display: flex;
@@ -172,19 +169,19 @@ export default {
   .kids-sec8-row {
     flex-direction: row;
     justify-content: center;
-    text-align: right;
+    text-align: left;
   }
   .kids-sec8-row h4 {
-    width: 25%;
+    width: 35%;
     margin: 0;
-    padding-right: 1em;
+    padding-right: 20px;
     font-size: 48px;
   }
   .kids-sec8-row h4 span{
     font-size: 48px;
   }
   .kids-sec8-row p {
-    width: 70%;
+    width: 65%;
     margin: 0;
     padding-left: 20px;
   }
