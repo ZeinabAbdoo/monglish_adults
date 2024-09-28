@@ -47,8 +47,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
         <div class="package-card">
@@ -71,8 +70,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
         <div class="package-card">
@@ -94,8 +92,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
       </div>
@@ -131,8 +128,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
 
@@ -160,8 +156,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
 
@@ -185,8 +180,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
       </div>
@@ -323,37 +317,6 @@
         .catch(error => console.error('Error fetching package details:', error));
 
       },
-      addToCart(packageId) {
-        let url = sessionStorage.getItem('userInfo') ? '/api/user/cart' : '/api/session/cart';
-        const userInfo = sessionStorage.getItem('userInfo');
-        let headers = {};
-        if (userInfo) {
-          try {
-            const parsedUserInfo = JSON.parse(userInfo);
-            const token = parsedUserInfo.token;
-
-            if (token) {
-              headers['Authorization'] = `Bearer ${token}`;
-              headers['Content-type'] = 'application/json';
-            }
-          } catch (error) {
-            console.error('Error parsing userInfo from sessionStorage:', error);
-          }
-        }
-        axios.post(url, {
-          course_package_id: packageId,
-          quantity: 1 
-        }, { headers })
-        .then(response => {
-          console.log('Item added to cart successfully:', response.data);
-          this.$router.push({ name: 'CartAr' }).then(() => {
-              window.location.reload();
-          });
-        })
-        .catch(error => {
-          console.error('Error adding item to cart:', error.response ? error.response.data : error.message);
-        });
-      }
     },
     mounted() {
       this.fetchPackagePrices();

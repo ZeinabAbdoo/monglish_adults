@@ -1,8 +1,12 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';
 import store from './store'; // Import your store
 import axios from 'axios';
+import router from './router';
+
+// Set the base URL for all Axios requests
+axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
+axios.defaults.withCredentials = true;
 
 axios.get('/api/csrf-token')
   .then(response => {
