@@ -3,6 +3,7 @@
     <MonglishNavbarAr />
     <AdultsLanding />
     <component :is="currentFooter" />
+    <WhatsappButton />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import MonglishNavbarAr from './components/MonglishNavbar.vue';
 import AdultsLanding from './components/ar/AdultsLanding.vue'
 import MonglishFooterAr from './components/ar/MonglishFooter.vue';
 import MonglishFooterEn from './components/en/MonglishFooter.vue';
+import WhatsappButton from './components/WhatsappButton.vue';
 
 export default {
   name: 'App',
@@ -33,6 +35,7 @@ export default {
     AdultsLanding,
     MonglishFooterAr,
     MonglishFooterEn,
+    WhatsappButton
   }
 }
 </script>
