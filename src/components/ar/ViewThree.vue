@@ -1,7 +1,7 @@
 <template>
   <div class="faq-section-n">
-    <h3>كل ما تريد معرفته</h3>
-    <h2>قسم الأسئلة الشائعة في متناول يديك!</h2>
+    <h3>أسئلة شائعة</h3>
+    <h2>وإجابات لكل استفساراتكم</h2>
     <div class="faq-items-n">
       <div class="faq-items-sub">
       <div class="faq-item-min" v-for="(item, index) in faqItems_1" :key="index">

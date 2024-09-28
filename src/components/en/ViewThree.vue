@@ -1,7 +1,7 @@
 <template>
   <div class="faq-section-n">
-    <h3>كل ما تريد معرفته</h3>
-    <h2>قسم الأسئلة الشائعة في متناول يديك!</h2>
+<h3>Everything You Need to Know</h3>
+<h2>The FAQ Section is at Your Fingertips!</h2>
     <div class="faq-items-n">
       <div class="faq-items-sub">
       <div class="faq-item-min" v-for="(item, index) in faqItems_1" :key="index">
@@ -47,61 +47,62 @@ export default {
     return {
       activeIndex: null,
       faqItems_1: [
-        {
-          question: 'لماذا أكاديمية مونجلش الدولية ؟',
-          answer: 'تعد أكاديمية مونجلش الدولية رائدة فى مجالها من خلال تدريس اللغة الإنجليزية بنظام منهج المعايشة الحصرى والمسجل رسميا بمكتبة الكونجرس الأمريكية. إن هذا المنهج يتم تدريسه ١٠٠ أونلاين ويشمل ١١ نادى تفاعلى مليء بالتطبيقات العملية مما يمكن الدارسين من جميع الأعمار من ممارسة اللغة بمتعة باللغة.'
-        },
-        {
-          question: 'ما هي المؤهلات التي يتمتع بها المعلمون لتعليم اللغة الانجليزية فى أكاديمية مونجلش؟',
-          answer: 'أعضاء فريق مونجلش يضم نخبة من المدرسين الأكفاء متعددى الجنسيات " المصرية والأمريكية والكندية والبريطانية والأسترالية"، خبراء في تعليم اللغة الانجليزية، حيث يشاركونك خبراتهم وعلمهم بكل شغف لضمان إتقان جميع المهارات. يميّزنا في مونجلش الابتكار، حيث نحرص على مواكبة كل حديث ونطبق حلول جديدة للمشاكل التي يواجهها الطلاب أثناء التعلم.'
-        },
-        {
-          question: "ما هي نوادي منهج المعايشة؟",
-          answer: "تنقسم نوادي المعايشة في مونجلش إلى نوادي أساسية، نوادي تفاعلية، ونوادي لتنمية المهارات السلوكية والتربوية، إيمانًا منا بأهمية التربية قبل التعليم. تأتي هذه الأندية ضمن رؤية مونجلش 2025 التي تركز على الجانب التربوي والنفسي في رحلة تعلم اللغات، وهو جانب لا يقل أهمية عن أي عنصر في المنظومة التعليمية الشاملة لدى أكاديمية مونجلش.\n\nالأندية الأساسية: نادي المحادثة، نادي المناظرة، نادي السينما، ونادي القراءة.\n\nالأندية التفاعلية: نادي الصوتيات، نادي الكتابة، نادي الرسم، ونادي المواهب.\n\nالأندية التربوية: ماما مونجي، النادي الاجتماعي، واللايف كوتش."
-        },
-        {
-          question: "هل يمكنني استرداد المبلغ؟",
-          answer: "يحق للمتدرب المطالبة باسترداد رسوم التدريب قبل بداية الكورس بـ٤٨ ساعة كحد أقصى، مع تحمل رسوم اختبار تحديد المستوى. للمزيد من المعلومات، يرجى الاطلاع على صفحة الشروط والأحكام الخاصة بالتسجيل."
-        },
-        {
-          question: "كيف يسرع منهج المعايشة الطلاقة في اللغة ٤ أضعاف؟",
-          answer: "عن طريق المعايشة وممارسة اللغة باستمرار ٦ أيام في الأسبوع من خلال الحصص الأسبوعية وأندية مونجلش التفاعلية المصممة خصيصًا لكل طفل. يتمتع الطفل بخبرات ٤ إلى ٦ معلمين في الشهر الواحد، مما يعزز من سرعة تعلم اللغة. نوفر بيئة أجنبية لممارسة اللغة من خلال معلمين معتمدين دوليًا في التعليم التعاوني. منهج المعايشة قائم على التفاعل والحماس وليس التلقين والحفظ، مما يوفر تجربة تعليمية ممتعة للأطفال وبدون ملل."
-        },
-        {
-          question: "كيف يمكنني تتبع تقدم طفلي؟",
-          answer: "من خلال قسم مخصص لمتابعة مستوى الطالب خلال الحصص الدراسية وإرسال تقرير أسبوعي حول حالة ومستوى الطفل التعليمي، مع إضافة أي ملاحظات من شأنها المساهمة في تقدم الطالب لغويًا."
-        },
-      ],
+  {
+    "question": "Why choose Monglish International Academy?",
+    "answer": "Monglish International Academy is a leader in its field through teaching English using the exclusive Living Curriculum method, officially registered with the U.S. Library of Congress. This curriculum is taught 100% online and includes 11 interactive clubs filled with practical applications, enabling learners of all ages to enjoy practicing the language."
+  },
+  {
+    "question": "What qualifications do the teachers at Monglish Academy have to teach English?",
+    "answer": "The Monglish team consists of a select group of proficient teachers from various nationalities (Egyptian, American, Canadian, British, and Australian), experts in teaching English. They share their experiences and knowledge with passion to ensure mastery of all skills. Innovation distinguishes us at Monglish, as we strive to keep up with the latest trends and apply new solutions to the challenges students face while learning."
+  },
+  {
+    "question": "What are the Living Curriculum clubs?",
+    "answer": "The Living Curriculum clubs at Monglish are divided into core clubs, interactive clubs, and clubs for developing behavioral and educational skills, believing in the importance of education before learning. These clubs are part of Monglish's 2025 vision, which focuses on the educational and psychological aspects of language learning, an aspect that is as important as any element in the comprehensive educational system at Monglish Academy.\n\nCore clubs: Conversation Club, Debate Club, Cinema Club, and Reading Club.\n\nInteractive clubs: Phonics Club, Writing Club, Art Club, and Talent Club.\n\nEducational clubs: Mama Mongi, Social Club, and Life Coach."
+  },
+  {
+    "question": "Can I get a refund?",
+    "answer": "The trainee has the right to request a refund of the training fees 48 hours before the start of the course at the latest, with the trainee bearing the cost of the placement test. For more information, please refer to the terms and conditions page regarding registration."
+  },
+  {
+    "question": "How does the Living Curriculum accelerate fluency in the language by 4 times?",
+    "answer": "Through immersion and constant language practice 6 days a week via weekly classes and Monglish interactive clubs designed specifically for each child. The child enjoys experiences with 4 to 6 teachers each month, enhancing the speed of language learning. We provide a foreign environment for practicing the language through internationally certified collaborative teachers. The Living Curriculum is based on interaction and enthusiasm rather than rote learning and memorization, providing an enjoyable educational experience for children without boredom."
+  },
+  {
+    "question": "How can I track my child's progress?",
+    "answer": "Through a dedicated section to monitor the student's level during classes and send a weekly report on the child's educational status and level, including any notes that may contribute to the student's linguistic progress."
+  }
+]
+,
       faqItems_2: [
-        {
-          question: "كيف يمكنني الاشتراك وما هو أنسب سن للطفل لبدء الدورات التعليمية؟",
-          answer: "يمكنك الاشتراك من خلال موقعنا الإلكتروني أو التواصل مع خدمة العملاء عبر الواتساب. دورات اللغة الإنجليزية لدينا مناسبة للأطفال من سن ٥ سنوات."
-        },
-        {
-          question: "كم من الوقت يلزم لتعلم اللغة الإنجليزية؟",
-          answer: "يحتاج الطالب من ٦ أشهر إلى ١٢ شهر للوصول إلى طلاقة في التحدث باللغة."
-        },
-        {
-          question: "ما هي مدة الحصة الدراسية؟",
-          answer: "ساعة ونصف هي مدة الحصة وتتم مرتين أسبوعيًا."
-        },
-        {
-          question: "كم عدد الطلاب في الحصة الدراسية؟",
-          answer: "يتراوح عدد الطلاب من ٥ إلى ١٢ طالب، حسب الفئة العمرية للدارسين."
-        },
-        {
-          question: "هل الحصة مسجلة أم لايف؟",
-          answer: "جميع الحصص تُقدّم لايف من خلال منصة زووم، ويمكن تسجيل الحصة من قبل الإدارة بإعلام مسبق في حالة غياب الطفل لأسباب قهرية."
-        },
-        {
-          question: "هل يحصل الأطفال على شهادة في نهاية دراستهم؟",
-          answer: "نعم، يحصل الأطفال على شهادة أونلاين، كما يمكن طلب إرسال نسخة مطبوعة ومعتمدة من الأكاديمية إلى العنوان الخاص بكم أينما كنتم."
-        },
-        {
-          question: "ما هي وسائل الدفع المتاحة؟",
-          answer: "وسائل الدفع المتاحة حاليًا هي أونلاين فقط من خلال موقعنا الرسمي أو رابط الدفع المباشر عبر Stripe باستخدام بطاقة الصراف الآلي."
-        }
-      ]
+  {
+    "question": "How can I enroll, and what is the suitable age for a child to start educational courses?",
+    "answer": "You can enroll through our website or contact customer service via WhatsApp. Our English language courses are suitable for children from the age of 5."
+  },
+  {
+    "question": "How long does it take to learn English?",
+    "answer": "A student needs between 6 months to 12 months to achieve fluency in speaking the language."
+  },
+  {
+    "question": "What is the duration of the class?",
+    "answer": "The class lasts for one and a half hours and takes place twice a week."
+  },
+  {
+    "question": "How many students are in the class?",
+    "answer": "The number of students ranges from 5 to 12, depending on the age group of the learners."
+  },
+  {
+    "question": "Are the classes recorded or live?",
+    "answer": "All classes are offered live through the Zoom platform, and the management can record the class with prior notification in case the child is absent for compelling reasons."
+  },
+  {
+    "question": "Do children receive a certificate at the end of their studies?",
+    "answer": "Yes, children receive an online certificate, and you can request to send a printed and certified copy from the academy to your address wherever you are."
+  },
+  {
+    "question": "What payment methods are available?",
+    "answer": "Currently, payment methods are available online only through our official website or direct payment link via Stripe using a debit card."
+  }
+]
     };
   },
   methods: {
@@ -115,5 +116,5 @@ export default {
 };
 </script>
 
-<style src="@/assets/styles/ar/ViewThree.css" scoped></style>
+<style src="@/assets/styles/en/ViewThree.css" scoped></style>
 
