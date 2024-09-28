@@ -1,8 +1,9 @@
 <template>  
   <!--Section Two Content-->
   <div class="kids-sec2">
-       <h1>مزايا دورات مونجلش
-       <br>تفتح أبواب المستقبل</h1>
+    <div class="kids-space">
+      <h1 >OUR DIPLOMA</h1>
+    </div>
     <div class="kids-sec2-cards">
       <div class="sec2-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="106" height="272" viewBox="0 0 106 272" fill="none">
@@ -16,10 +17,10 @@
               <stop offset="1" stop-color="#F1F1F1"></stop>
             </linearGradient>
           </defs>
-         </svg>
-        <h1>دروس التدريب الأساسية</h1>
-        <p>جداول دروسنا مرنة ومتنوعة، ومصممة لتناسب جدولك اليومي دون أي تأثير سلبي، مما يوفر لك تجربة تعليمية مريحة
-          ومتناغمة مع نمط حياتك.</p>
+        </svg>
+        <h1>Basic Training Lessons</h1>
+        <p>Our lesson schedules are flexible and varied, tailored to fit your daily schedule without any negative
+          impact, providing you with a comfortable learning experience that is in harmony with your lifestyle.</p>
       </div>
       <div class="sec2-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="162" height="273" viewBox="0 0 162 263" fill="none">
@@ -34,9 +35,9 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>نوادي الانغماس الإضافية</h1>
-        <p>رحلة ممتعة إلى عالم المغامرة في مونجلش! في نوادي مونجلش التفاعلية، كل باب نفتحه يأخذنا إلى عالم ساحر من
-          الألعاب والقصص التي تجعل تعلم اللغة الإنجليزية رحلة مثيرة.</p>
+        <h1>Additional Immersion Clubs</h1>
+        <p>A fun trip to the adventurous world of Monglish! At Munglish Interactive Clubs, every door we open takes us
+          to an enchanting world of games and stories that make learning English an exciting journey.</p>
       </div>
       <div class="sec2-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="162" height="273" viewBox="0 0 162 253" fill="none">
@@ -51,9 +52,9 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>الدعم المتخصص</h1>
-        <p>تم تصميم برامجنا التعليمية لتوفير الدعم والتوجيه الإضافي للأفراد الذين لديهم احتياجات أو متطلبات محددة، مما
-          يضمن حصولهم على المساعدة التي يحتاجون إليها لتحقيق النجاح.</p>
+        <h1>Specialized Support</h1>
+        <p>Our educational programs are designed to provide additional support and guidance for individuals with
+          specific needs or requirements, ensuring they receive the help they need to succeed.</p>
       </div>
     </div>
   </div>
@@ -67,13 +68,13 @@ export default {
 
 <style scoped>
 .kids-sec2 {
-  direction: rtl;
   text-align: center;
   background-color: #fff;
   color: #165e84;
   font-family: 'DIN Next LT Arabic';
   font-weight: 500;
   padding: 1em;
+  direction: ltr;
 }
 .kids-sec2 h1 {
   font-family: 'DIN Next LT Arabic', sans-serif;
@@ -148,8 +149,9 @@ export default {
     font-size: 1.3em;
   }
   .sec2-card svg {
-    max-width: 80px;
-    margin-top: -2em;
+    max-width: 60%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .sec2-card h1 {
     font-size: 1.2em;
