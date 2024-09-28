@@ -63,12 +63,12 @@ export default {
     text-align: right;
   }
   .immerse-row h3 {
-    width: 20%;
+    width: 30%;
     margin: 0;
     padding-right: 50px;
   }
   .immerse-row p {
-    width: 80%;
+    width: 70%;
     margin: 0;
     padding-left: 25px;
   }

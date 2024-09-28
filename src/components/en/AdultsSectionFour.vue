@@ -2,10 +2,10 @@
   <!--Section Five Content-->
   <div class="immerse-sec2">
         <div class="immerse-row">
-            <h3>تعرف علي أندية مونجلش التفاعلية</h3>
-            <p>اكتشف منهج المعايشة الفريد في مونجلش، حيث نغمركم بالكامل في عالم اللغة الإنجليزية. تجربة التعلم لدينا تتخطى
-                الحدود التقليدية، مع التفاعل المكثف والمستمر مع الإنجليزية في سيناريوهات حياتية واقعية، مما يضمن تعزيز الفهم
-                العميق وسلاسة اتقان الغة.</p>
+        <h3>Get to know Monglish Interactive Clubs</h3>
+        <p>
+          "Discover the unique Mongi- imerse approach in Monglish, where we fully immerse you in the world of the English language. Our learning experience goes beyond traditional boundaries, with intensive and continuous interaction with English in real-life scenarios, ensuring enhanced understanding and smooth language mastery"
+        </p>
         </div>
         <ImmerseClubs />
   </div>
@@ -31,7 +31,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  direction: rtl;
+  direction: ltr;
 }
 .immerse-row {
   display: flex;
@@ -60,17 +60,17 @@ export default {
   .immerse-row {
     flex-direction: row;
     justify-content: center;
-    text-align: right;
+    text-align: left;
   }
   .immerse-row h3 {
-    width: 20%;
+    width: 35%;
     margin: 0;
-    padding-right: 50px;
+    padding-left: 50px;
   }
   .immerse-row p {
-    width: 80%;
+    width: 65%;
     margin: 0;
-    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 </style>

@@ -1,7 +1,13 @@
 <template>
   <div class="kids-carousel-container">
-    <Carousel :itemsToShow="itemsToShow" :itemsToScroll="1" :autoplay="false">
-      <Slide v-for="item in clubs" :key="item.id">
+    <Carousel
+      :itemsToShow="itemsToShow"
+      :itemsToScroll="1"
+      :autoplay="false"
+      v-model:currentPage="currentPage"
+      @change="onPageChange"
+    >
+      <Slide v-for="item in paginatedClubs" :key="item.id">
         <div class="kids-card">
           <img :src="item.img" :alt="item.title" class="kids-card-img" />
           <div class="kids-card-content">
@@ -11,22 +17,64 @@
         </div>
       </Slide>
     </Carousel>
+
+    <div class="pagination">
+      <button
+        v-for="page in totalPages"
+        :key="page"
+        @click="currentPage = page"
+        :class="{ active: currentPage === page }"
+      >
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
   components: { Carousel, Slide },
   setup() {
-    const itemsToShow = ref(3); 
+    const itemsToShow = ref(3);
+    const currentPage = ref(1);
+    const itemsPerPage = ref(3); 
+    const clubs = ref([
+        { id: 1, img: require('@/assets/images/clubs/1.png'), title: 'Reading Club', description: 'Students are given a part of a story to practice listening to and reading it multiple times, repeating after the attached audio file. When they are ready to read with the same proficiency, they join more advanced activities where they read to a specialized teacher who evaluates their performance and gives them different instructions for improvement.' },
+        { id: 2, img: require('@/assets/images/clubs/5.png'), title: 'Cinema Club', description: 'In our club, students learn daily phrases by watching parts of movies, focusing on specific sentences to master correct pronunciation. After the class, students record these phrases and send the recordings to the teacher via WhatsApp groups for correction.' },
+        { id: 3, img: require('@/assets/images/clubs/8.png'), title: 'Debate Club', description: 'A monthly competition between two classes of the same or similar level on different topics, attended by the classes’ teachers. This club aims to foster a competitive spirit among students to showcase their best and encourage continuous progress in developing their language skills.' },
+        { id: 4, img: require('@/assets/images/clubs/7.png'), title: 'Talent Club', description: 'In this club, students showcase their various skills such as singing, embroidery, traditional crafts, and different sports in a joyful and enjoyable atmosphere for both students and parents.' },
+        { id: 5, img: require('@/assets/images/clubs/2.png'), title: 'Writing Club', description: 'In this club, students learn academic writing and various types of texts according to their level and age. It is considered a separate course from the core classes.' },
+        { id: 6, img: require('@/assets/images/clubs/6.png'), title: 'Phonetics Club', description: 'This club provides support for students with pronunciation issues. A specialized teacher trains the student on correct pronunciation through interactive activities, improving their ability to pronounce words and sentences correctly.' },
+        { id: 7, img: require('@/assets/images/clubs/1.png'), title: 'Life Coach', description: 'This club focuses on skill development programs with top trainers and helps trainees better understand life stages and individual personalities through individual and group sessions divided by age groups.' },
+        { id: 8, img: require('@/assets/images/clubs/2.png'), title: 'Drawing Club', description: 'A fun space where students learn basic drawing skills through videos on YouTube teaching drawing in English.' },
+        { id: 9, img: require('@/assets/images/clubs/1.png'), title: 'Social Club', description: 'One of the main public clubs focused on increasing awareness among parents through specialists discussing behavioral issues that may affect us or our children. Key topics and home activities to assist will be discussed.' },
+        { id: 10, img: require('@/assets/images/clubs/3.png'), title: 'Mama Moongi Club', description: 'This club focuses on discussing and addressing various behavioral challenges. We offer a free initial consultation session for the student and parent, identifying any negative behavior needing correction or positive behavior to be reinforced. This pre-booked session provides an individualized educational plan to meet each student’s needs.' },
+        { id: 11, img: require('@/assets/images/clubs/4.png'), title: 'Conversation Club', description: 'A free space for students to practice what they learn during classes through conversation, where students meet daily with their peers and talk freely for a duration they decide. Teachers provide them with specific tasks after each class to complete in the Conversation Club.' }
+      ]);
 
     const updateItemsToShow = () => {
-      itemsToShow.value = window.innerWidth < 768 ? 1 : 3;
-      console.log('itemsToShow updated:', itemsToShow.value);
+  if (window.innerWidth < 768) {
+    itemsToShow.value = 1; 
+    itemsPerPage.value = 1; // Show 1 item per page on mobile
+  } else {
+    itemsToShow.value = 3;
+    itemsPerPage.value = 3; // Show 3 items per page on larger screens
+  }
+  console.log('itemsToShow updated:', itemsToShow.value);
+};
+
+const totalPages = computed(() => Math.ceil(clubs.value.length / itemsPerPage.value));
+    
+    const paginatedClubs = computed(() => {
+      const start = (currentPage.value - 1) * itemsPerPage.value;
+      return clubs.value.slice(start, start + itemsPerPage.value);
+    });
+
+    const onPageChange = (newPage) => {
+      currentPage.value = newPage;
     };
 
     onMounted(() => {
@@ -40,25 +88,12 @@ export default {
 
     return {
       itemsToShow,
+      currentPage,
+      totalPages,
+      onPageChange,
+      paginatedClubs,
     };
   },
-  data() {
-    return {
-      clubs: [
-        { id: 1, img: require('@/assets/images/clubs/1.png'), title: 'نادي القراءة', description: 'يتم إعطاء الطالب جزء من قصة يتدرب على سماعها<br> مع قراءتها عدة مرات، مع الترديد خلف الملف الصوتي المرفق، وعندما يكون جاهزا للقراءة بنفس الكفاءة ينضم لأنشطة متقدمة أكثر حيث يقرأ خلالها على معلم متخصص، ليُقيِّم أداءه ويعطيه تعليمات مختلفة للتحسن .' },
-        { id: 2, img: require('@/assets/images/clubs/5.png'), title: 'نادي السينما', description: 'في نادينا، يتعلم الطلاب عبارات يومية من خلال مشاهدة أجزاء من أفلام، مع التركيز على جمل محددة لإتقان النطق الصحيح. بعد المحاضرة، يسجل الطلاب هذه العبارات ويرسلون التسجيلات للمدرس عبر مجموعات الواتساب للتصحيح.' },
-        { id: 3, img: require('@/assets/images/clubs/8.png'), title: 'نادي المناظرات', description: 'هو مسابقة تتم شهريا بين فصليين في نفس المستوى أومتتقاربين في المستوى علي موضوعات مختلفة بحضور معلمين الفصول ويعمل هذا النادي على خلق روح المنافسة بين الطلاب لإبراز أفضل ما عندهم وتشجيعهم على التقدم المستمر في تنمية مهارتهم في اللغة' },
-        { id: 4, img: require('@/assets/images/clubs/7.png'), title: 'نادي المواهب', description: 'يعرض الطالب في هذا النادي مهاراتهم المختلفة مثل الغناء والتطريز والأشغال البدوية والألعاب الرياضية المختلفة، في جو مبهج وممتع للطالب وأولياء الأمور.' },
-        { id: 5, img: require('@/assets/images/clubs/2.png'), title: 'نادي الكتابة', description: 'في هذا النادي يتعلم الطالب الكتابة الأكاديمية وكتابة أنواع مختلفة من النصوص حسب مستواهم وعمرهم، وهي تعتبر دورة منفصلة عن الحصص الأساسية' },
-        { id: 6, img: require('@/assets/images/clubs/6.png'), title: 'نادي الصوتيات', description: 'هذا النادي يقدم الدعم للطالب الذين لديهم مشکلات تتعلق بالنطق . حيث يقوم معلم متخصص بتدريب الطالب على كيفية النطق الصحيح، لكي يتمكن الطالب من خلال العديد من الأنشطة التفاعلية من ضبط النطق لديه تحسين مهارة النطق الصحيح الكلمات والجمل' },
-        { id: 7, img: require('@/assets/images/clubs/1.png'), title: 'اللايف كوتش – Life Coach', description: 'الاهتمام في هذا النادي خاص ببرامج تنمية المهارات بشكل متطور وعن طريق أفضل المحاضرين و يساعد المتدرب أكثر علي فهم مراحل الحياة وطبيعة الشخصية في كل مراحلة بشكل فردي وجماعي في مجموعات مقسمة لفئات عمرية تشمل جميع الاعمار' },
-        { id: 8, img: require('@/assets/images/clubs/2.png'), title: 'نادي الرسم', description: 'هو مساحة حرة من المرح - يقوم فيها الطالب يتعلم مهارات الرسم البسيطة و ذلك من خلال تشغيل فيديو من خلال اليوتيوب لتعليم الرسم باللغة الإنجليزية' },
-        { id: 9, img: require('@/assets/images/clubs/1.png'), title: 'النادي الاجتماعي', description: 'يعتبر من أهم الأندية العامة التي تهتم بزيادة الوعي لدي ولي الأمر عن طريق المختصين و مناقشتهم لمشاكل السلوكيات التي قد تواجهنا أوتواجه أبناءنا علي العموم و سيتم مناقشة أهم المواضيع وكيفية التعامل معها و أهم الانشطة المنزلية التي نحتاجها لماسعدة' },
-        { id: 10, img: require('@/assets/images/clubs/3.png'), title: 'نادي ماما مونجي', description: 'يتميز هذا النادي بتركيزه على مناقشة ومعالجة مختلف التحديات السلوكية. نقدم جلسة استشارية مجانية أولية للطالب وولي الأمر، يتم خلالها التعرف على أي سلوك سلبي يحتاج إلى تصحيح أو سلوك إيجابي يمكن تعزيزه. هذه الجلسة التي تتم بحجز مسبق، توفر خطة تربوية فردية تلبي احتياجات كل طالب.' },
-        { id: 11, img: require('@/assets/images/clubs/4.png'), title: 'نادي المحادثة', description: 'هو مساحة حرة للطلاب لممارسة ما يتعلمونه أثناء الحصص عن طريق الحوار، حيث يتقابل الطلاب يومياً مع زملائهم، ويتحدثون بحرية لمدة يحددونها هم بأنفسهم. ويقوم معلمو الفصول بتزويدهم بمهام خاصة بعد كل حصة، لينجزوها في نادي المحادثة.' }
-      ]
-    };
-  }
 };
 </script>
 
@@ -66,13 +101,13 @@ export default {
 .kids-carousel-container {
   width: 95%;
   margin: 0 auto;
-  direction: rtl;
+  direction: ltr;
 }
 .kids-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; 
-  text-align: right;
+  align-items: flex-start; 
+  text-align: left;
   padding: 1rem;
   background: #fff;
   border-radius: 1em;
@@ -83,16 +118,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-.kids-card:hover {
-  background: linear-gradient(111.84deg, #2C80AC 0%, #165E84 100%);
-  color: #ffffff;
-}
-
-.kids-card:hover .kids-card-title,
-.kids-card:hover .kids-card-description {
-  color: #ffffff;
-}
-
 .kids-card-img {
   width: 20%; 
   height: auto; 
@@ -107,8 +132,8 @@ export default {
   justify-content: center; 
 }
 .kids-card-title {
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   font-family: 'DIN Next LT Arabic';
 }
@@ -116,10 +141,34 @@ export default {
   font-size: 1.25em;
   color: #6b6b6b;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.pagination button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.pagination button.active {
+  background-color: #165E84;
+  padding: 0.5rem 1rem;
+}
 @media (max-width: 767px) {
   .kids-card {
     width: 100%;
   }
+  .pagination button {
+  margin: 0 0.25rem;
+  padding: 0.4rem 0.4rem;
+}
+.pagination button.active {
+  padding: 0.4rem 0.8rem;
+}
 }
 @media (min-width: 768px) {
   .kids-card {
