@@ -35,20 +35,14 @@
             <ul>
               <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
               <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
-              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
-              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-              <li>نادى المـــــــــواهب:<span>مرة أسبوعياً</span></li>
-              <li>نادى الرســـــــــــــــــــم:<span>مرة أسبوعياً</span></li>
-              <li>لقاء تربوي مع ولي الأمر:<span> مرة شهرياً</span></li>
-              <li>نادى الصوتــــــــــيات:<span> بترشيح المعلم</span></li>
-              <li>نادى الكتــــــــــــــــــــابة:<span>مرة أسبوعياً</span></li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
               <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
-              <li>إجتماع شهري لأولياء الأمور</li>
+              <li>نادى الصوتــــــــــيات:<span>بطلب من المدرب</span></li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
         <div class="package-card">
@@ -64,15 +58,12 @@
             <ul>
               <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
               <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
-              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
-              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-              <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
-              <li>إجتماع شهري لأولياء الأمور</li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
         <div class="package-card">
@@ -89,13 +80,11 @@
             <ul>
               <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
               <li>نادى القـــــــــــــــــراءة:<span> مرة شهرياً</span></li>
-              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-              <li>إجتماع شهري لأولياء الأمور</li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
       </div>
@@ -119,20 +108,14 @@
             <ul>
               <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
               <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
-              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
-              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-              <li>نادى المـــــــــواهب:<span>مرة أسبوعياً</span></li>
-              <li>نادى الرســـــــــــــــــــم:<span>مرة أسبوعياً</span></li>
-              <li>لقاء تربوي مع ولي الأمر:<span> مرة شهرياً</span></li>
-              <li>نادى الصوتــــــــــيات:<span> بترشيح المعلم</span></li>
-              <li>نادى الكتــــــــــــــــــــابة:<span>مرة أسبوعياً</span></li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
               <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
-              <li>إجتماع شهري لأولياء الأمور</li>
+              <li>نادى الصوتــــــــــيات:<span>بطلب من المدرب</span></li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
 
@@ -153,15 +136,12 @@
             <ul>
               <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
               <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
-              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
-              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
               <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-              <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
-              <li>إجتماع شهري لأولياء الأمور</li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
 
@@ -185,8 +165,7 @@
               <li>إجتماع شهري لأولياء الأمور</li>
               <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
             </ul>
-<a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">             اذهب لشرائه
-            </a>
+            <a :href="'https://www.monglish.co.uk/ar/adult-courses#packages-section'" class="purchase-btn">اذهب لشرائه</a>
           </div>
         </div>
       </div>
@@ -209,17 +188,15 @@
             </h2>
           <h6>واستمتع بالاتي:</h6>
           <ul>
-            <li>حصص أســـــــاسية:<span> 48 حصة</span></li>
-            <li>نادى القـــــــــــــــــراءة:<span> 24 حصةمرة أسبوعياً</span></li>
-            <li>نادى الســــــــــــــينما:<span> 48 حصة</span></li>
-            <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
-            <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-            <li>نادى الصوتــــــــــيات:<span> بترشيح المعلم</span></li>
-            <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
-            <li>تـــــحدث مع أجانب :<span>مرتين شهرياً</span></li>
-            <li>اجتماع شهري مع المتدربين</li>
-            <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
-          </ul>
+              <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
+              <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
+              <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
+              <li>نادى لايف كوتش:<span>جلسة مجانية</span></li>
+              <li>نادى الصوتــــــــــيات:<span>بطلب من المدرب</span></li>
+              <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
+            </ul>
           <a :href="'https://www.monglish.co.uk/ar/package/'" class="purchase-btn">
              اذهب لشرائه
             </a>
@@ -241,13 +218,13 @@
             </h2>
           <h6>واستمتع بالاتي:</h6>
           <ul>
-            <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
-            <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
-            <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
-            <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
-            <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
-            <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
-          </ul>
+              <li>حصص أســـــــاسية:<span> 8 شهرياً</span></li>
+              <li>نادى القـــــــــــــــــراءة:<span> مرة أسبوعياً</span></li>
+              <li>نادى المـــــــناظرات:<span> مرة شهرياً</span></li>
+              <li>نادى المــــــــــــحادثة:<span> يومياً</span></li>
+              <li>نادى الســــــــــــــينما:<span>مرة أسبوعياً</span></li>
+              <li>تقاريــــــر شهريـــــــــــة مفصلة لمستوى اللغة</li>
+            </ul>
           <a :href="'https://www.monglish.co.uk/ar/package/'" class="purchase-btn">
              اذهب لشرائه
             </a>
@@ -323,37 +300,6 @@
         .catch(error => console.error('Error fetching package details:', error));
 
       },
-      addToCart(packageId) {
-        let url = sessionStorage.getItem('userInfo') ? '/api/user/cart' : '/api/session/cart';
-        const userInfo = sessionStorage.getItem('userInfo');
-        let headers = {};
-        if (userInfo) {
-          try {
-            const parsedUserInfo = JSON.parse(userInfo);
-            const token = parsedUserInfo.token;
-
-            if (token) {
-              headers['Authorization'] = `Bearer ${token}`;
-              headers['Content-type'] = 'application/json';
-            }
-          } catch (error) {
-            console.error('Error parsing userInfo from sessionStorage:', error);
-          }
-        }
-        axios.post(url, {
-          course_package_id: packageId,
-          quantity: 1 
-        }, { headers })
-        .then(response => {
-          console.log('Item added to cart successfully:', response.data);
-          this.$router.push({ name: 'CartAr' }).then(() => {
-              window.location.reload();
-          });
-        })
-        .catch(error => {
-          console.error('Error adding item to cart:', error.response ? error.response.data : error.message);
-        });
-      }
     },
     mounted() {
       this.fetchPackagePrices();

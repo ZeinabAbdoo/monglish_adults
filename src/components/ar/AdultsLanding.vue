@@ -30,6 +30,8 @@
   </div>
 
   <PackagesAdults />
+  <VideoSlider />
+  <FormSection />
   <ViewThree />
  
   <div class="Last-section">
@@ -49,7 +51,9 @@ import AdultsSectionThree from '../../components/ar/AdultsSectionThree.vue';
 import AdultsSectionFour from '../../components/ar/AdultsSectionFour.vue';
 import AdultsSectionFive from '../../components/ar/AdultsSectionFive.vue';
 import PackagesAdults from '../../components/ar/PackagesAdults.vue';
-import ViewThree from '../../components/ar/ViewThree';
+import ViewThree from '../../components/ar/ViewThree.vue';
+import FormSection from '../../components/ar/FormSection.vue';
+import VideoSlider  from '../../components/ar/VideoSlider.vue';
 
 import Swiper from 'swiper';
 import 'swiper/css';
@@ -67,7 +71,9 @@ export default {
     AdultsSectionFour,
     AdultsSectionFive,
     PackagesAdults,
-    ViewThree
+    ViewThree,
+    FormSection,
+    VideoSlider
   },
   data() {
     return {

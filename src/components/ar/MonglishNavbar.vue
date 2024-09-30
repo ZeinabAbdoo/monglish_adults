@@ -42,12 +42,9 @@ export default {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    padding: 10px;
     z-index: 1000;
 }
-.logo{
-    padding : 0 100px;
-}
+
 .navbar button{
     border: none;
     background-color: transparent;
@@ -56,6 +53,5 @@ export default {
     font-size: 1.2rem;
     font-family: 'DIN Next LT Arabic';
     font-weight: 500;
-    margin-left: 100px;
 }
 </style>

@@ -3,7 +3,7 @@
     <component :is="currentNavbar" />
     <router-view />
     <component :is="currentFooter" />
-    <WhatsappButton />
+    <component :is="WhatsappButton" />
   </div>
 </template>
 
@@ -13,7 +13,8 @@ import MonglishNavbarEn from './components/en/MonglishNavbar.vue';
 import AdultsLanding from './components/ar/AdultsLanding.vue'
 import MonglishFooterAr from './components/ar/MonglishFooter.vue';
 import MonglishFooterEn from './components/en/MonglishFooter.vue';
-import WhatsappButton from './components/WhatsappButton.vue';
+import WhatsappButtonAr from './components/ar/WhatsappButton.vue';
+import WhatsappButtonEn from './components/en/WhatsappButton.vue';
 
 export default {
   name: 'App',
@@ -21,6 +22,7 @@ export default {
     return {
       currentNavbar: 'MonglishNavbarAr',
       currentFooter: 'MonglishFooterAr',
+      WhatsappButton: 'WhatsappButtonAr',
     };
   },
   watch: {
@@ -28,9 +30,11 @@ export default {
       if (to.path.startsWith('/en')) {
         this.currentNavbar = 'MonglishNavbarEn';
         this.currentFooter = 'MonglishFooterEn';
+        this.WhatsappButton = 'WhatsappButtonEn';
       } else {
         this.currentNavbar = 'MonglishNavbarAr';
         this.currentFooter = 'MonglishFooterAr';
+        this.WhatsappButton = 'WhatsappButtonAr';
       }
     }
   },
@@ -39,7 +43,8 @@ export default {
     AdultsLanding,
     MonglishFooterAr,
     MonglishFooterEn,
-    WhatsappButton,
+    WhatsappButtonAr,
+    WhatsappButtonEn,
     MonglishNavbarEn
   }
 }
@@ -49,5 +54,9 @@ export default {
   @font-face {
     font-family: 'DIN Next LT Arabic';
     src: url('@/assets/fonts/DINNextLTArabic-Regular-3.ttf') format('truetype');
+  }
+
+  #app{
+    width : 100%;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <!--Section One Content-->
+  <!-- Section One Content -->
   <div class="adults-sec1">
     <div class="text-container">
       <h3>استثمر في مستقبلك، </h3>
@@ -7,7 +7,7 @@
       <h2>حيث يصبح الامتياز واقعًا</h2>
       <p>دورات اللغة الإنجليزية في مونجلش مصممة خصيصًا لك لتلبية طموحاتك واحتياجاتك. نوفر لك تجربة تعليمية متميزة تضمن نتائج مذهلة وعملية في إتقان اللغة!</p>
       <button @click="sendMessage">إشترك معنا الأن
-              <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></i>
       </button>
     </div>
   </div>
@@ -16,23 +16,16 @@
 <script>
 export default {
   name: "MonglishSectionOne",
-  methods : {
+  methods: {
     async sendMessage() {
       try {
         const response = await fetch(`https://service.monglish.co.uk/api/get-phone-number`);
         if (!response.ok) {
-          console.log('Network response was not ok');
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        this.getNumber = data.phone_number;
-
-        if (this.chatInput !== '' && this.getNumber) {
-          const baseUrl = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-              ? 'whatsapp://send'
-              : 'https://web.whatsapp.com/send';
-          const url = `${baseUrl}?phone=${this.getNumber}&text=${this.chatInput}`;
-          window.open(url, '_blank');
-        }
+        const url = `https://wa.me/${data.phone_number}`; 
+        window.open(url, '_blank');
       } catch (error) {
         console.error('Error fetching phone number:', error);
       }
@@ -137,7 +130,7 @@ export default {
   .text-container {
     max-width: 100%; /* Use full width on mobile */
     padding: 3rem 1rem; /* Adjust padding */
-    margin-top: 25em; /* Add space before the text container */
+    margin-top: 20em; /* Add space before the text container */
   }
 
   .adults-sec1 h3 {

@@ -3,6 +3,8 @@ import App from './App.vue';
 import store from './store'; // Import your store
 import axios from 'axios';
 import router from './router';
+import VueTelInput from 'vue3-tel-input'
+import 'vue3-tel-input/dist/vue3-tel-input.css'
 
 // Set the base URL for all Axios requests
 axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
@@ -34,4 +36,5 @@ axios.interceptors.request.use(
 createApp(App)
   .use(router)
   .use(store)
+  .use(VueTelInput)
   .mount('#app');
